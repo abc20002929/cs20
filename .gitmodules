@@ -1,3 +1,6 @@
 [submodule "stanford-tensorflow-tutorials"]
 	path = stanford-tensorflow-tutorials
 	url = https://github.com/chiphuyen/stanford-tensorflow-tutorials.git
+[submodule "stanford-tensorflow-tutorials-ljj"]
+	path = stanford-tensorflow-tutorials-ljj
+	url = https://github.com/abc20002929/stanford-tensorflow-tutorials.git
