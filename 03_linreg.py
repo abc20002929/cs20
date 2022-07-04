@@ -14,7 +14,8 @@ DATA_FILE = 'stanford-tensorflow-tutorials/examples/data/birth_life_2010.txt'
 # Step 1: read in the data
 data, n_samples = utils.read_birth_life_data(DATA_FILE)
 # Step 2: create Dataset and iterator
-#n_samples = 3
+n_samples = 5
+data = np.array([[37.887,10],[24.935,15],[19.067,20],[15.913,25],[13.67,30]],dtype=np.float32)
 #data = np.array([[21.6,18],[13.7,28],[16.7,24]],dtype=np.float32)
 dataset = tf.data.Dataset.from_tensor_slices((data[:,0], data[:,1]))
 iterator = dataset.make_initializable_iterator()
@@ -43,7 +44,7 @@ optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.001).minimize(loss
 
 with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
-    epochs = 100
+    epochs = 10000
     for i in range(epochs):
         sess.run(iterator.initializer)
         total_loss = 0
